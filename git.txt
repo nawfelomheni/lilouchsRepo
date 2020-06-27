@@ -20,4 +20,7 @@ git diff master origin/master
 -- remote contains a file that does not exist in the local repo: diff history: a merge is needed -- pull befor push always --
 git pull --allow-unrelated-histories origin master
 git push origin master
-
+-- branches --
+git branch branch_name : create a branch
+git branch : list branches
+git chekout branch_name: switch to the branch_name
