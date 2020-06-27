@@ -6,8 +6,15 @@ git status
 git diff(between Working area and staging area: file must have an older version in Staging Area)
 ---
 git diff --satged (between staging area and Local Repo: file must have an older version in Staging Area)
-
-
-
+git rm file_name (removed from  Working Area(In Machine) > Staging Area(add): commit to remove from LocalRepo)
+-- Connect to remote Repo --
+$ git remote add origin remote repository URL
+# Sets the new remote
+$ git remote -v
+# Verifies the new remote URL
+-- check remote before push/pull -- 
+git fetch 
+-- check diff between local repo and remote repo --
+git diff master origin/master
 
 
