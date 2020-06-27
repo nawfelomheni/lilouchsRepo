@@ -1,0 +1,1 @@
+ git workflow: Working Area(In Machine) > Staging Area(add)  > Repo(commit)
