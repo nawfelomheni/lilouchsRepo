@@ -26,7 +26,7 @@ git branch : list branches
 git chekout branch_name: switch to the branch_name
 ---
 git rm file_name
-in master branch (git merge dev the push)
+in master branch (git merge dev -m ''; then push)
 --- revert an add or a commit
 revert an add (move back from Staging Area to Working Area): git reset HEAD file_name
 git reset HEAD~ (move back from LocalRepo to Working Area): revert the last Commit
