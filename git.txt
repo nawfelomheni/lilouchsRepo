@@ -1,1 +1,13 @@
- git workflow: Working Area(In Machine) > Staging Area(add)  > Repo(commit)
+git workflow: Working Area(In Machine) > Staging Area(add) > LocalRepo(commit)
+git config user.name/user.email
+git add .
+git commit -m ''
+git status
+git diff(between Working area and staging area: file must have an older version in Staging Area)
+---
+git diff --satged (between staging area and Local Repo: file must have an older version in Staging Area)
+
+
+
+
+
