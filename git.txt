@@ -33,3 +33,6 @@ git reset HEAD~ (move back from LocalRepo to Working Area): revert the last Comm
 ---Discard last changes
 git checkout -- file_name
 git log --oneline --graph --decorate --all
+-- rename and move --
+git mv file_name /oldDirectory /newDirectory
+git mv old_file_name new_file_name
