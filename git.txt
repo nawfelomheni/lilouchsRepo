@@ -16,5 +16,7 @@ $ git remote -v
 git fetch 
 -- check diff between local repo and remote repo --
 git diff master origin/master
-
+-- remote contains ReadMe: diff history: a merge is needed -- pull befor push always --
+git pull --allow-unrelated-histories origin master
+git push origin master
 
