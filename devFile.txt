@@ -1,1 +1,3 @@
-this is the dev file restored manually
+version: 2
+status: waiting for approval
+body: the new version of the dev file is ready
