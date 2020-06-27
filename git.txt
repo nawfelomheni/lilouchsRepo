@@ -30,3 +30,6 @@ in master branch (git merge dev the push)
 --- revert an add or a commit
 revert an add (move back from Staging Area to Working Area): git reset HEAD file_name
 git reset HEAD~ (move back from LocalRepo to Working Area): revert the last Commit
+---Discard last changes
+git checkout -- file_name
+git log --oneline --graph --decorate --all
