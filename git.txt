@@ -13,6 +13,8 @@ $ git remote add origin remote_repository_URL
 # Sets the new remote
 $ git remote -v
 # Verifies the new remote URL
+-- set the origin/remote Repo --
+git remote set-url origin git@github.com:nawfelomheni/Puber_v2.git
 -- check remote before push/pull -- 
 git fetch 
 -- check diff between local repo and remote repo --
@@ -36,3 +38,8 @@ git log --oneline --graph --decorate --all
 -- rename and move --
 git mv file_name /oldDirectory /newDirectory
 git mv old_file_name new_file_name
+-- git log -- 
+git log --oneline --graph --decorate --all
+git log --since="2 hours ago"
+git log file_name
+git show commit_id
