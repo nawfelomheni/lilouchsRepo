@@ -4,7 +4,7 @@ git init
 git add .
 git commit -m ''
 git status
-git diff(between Working area and staging area: file must have an older version in Staging Area)
+git  diff(between Working area and staging area: file must have an older version in Staging Area)
 ---
 git diff --satged (between staging area and Local Repo: file must have an older version in Staging Area)
 git rm file_name (removed from  Working Area(In Machine) > Staging Area(add): commit to remove from LocalRepo)
@@ -43,3 +43,7 @@ git log --oneline --graph --decorate --all
 git log --since="2 hours ago"
 git log file_name
 git show commit_id
+-- Git Alias -- *******
+git config --global alias.glogs "log --oneline --graph --decorate --all"
+vi user_home_directory/.gitconfig OR vi ~/.gitconfig
+--
