@@ -45,5 +45,5 @@ git log file_name
 git show commit_id
 -- Git Alias -- *******
 git config --global alias.glogs "log --oneline --graph --decorate --all"
-vi user_home_directory/.gitconfig OR vi ~/.gitconfig
---
+vi user_home_directory/.gitconfig OR vi ~/.gitcon
+
