@@ -48,5 +48,17 @@ services:
       - "2222:8080"
     networks:
       - net
+
+  web:
+    container_name: web
+    image: ansible-web
+    build:
+      context: jenkins_ansible_home/web
+    ports:
+      - "80:80"
+    networks:
+      - net
+
+
 networks:
   net:
