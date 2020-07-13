@@ -1,0 +1,40 @@
+job ("maven-job-dsl")
+  {
+    description("this the DSL version of the maven-job project")
+    scm 
+   {  
+     git 
+     {
+       remote
+       {
+         url("https://github.com/jenkins-docs/simple-java-maven-app.git")
+         }
+       branch("master")
+       }
+     }
+    steps
+    {
+      maven 
+      {
+        mavenInstallation('jenkins-maven')
+        goals('-B -DskipTests clean package')
+        }
+      maven
+      {
+        mavenInstallation("jenkins-maven")
+        goals('test')
+        }
+
+      shell("""
+                echo "***********************"
+                echo "** Deploying the JAR **"
+                echo "***********************"
+                java -jar /var/jenkins_home/workspace/maven-job/target/my-app-1.0-SNAPSHOT.jar
+            """)
+      }
+    publishers
+    {
+      archiveJunit("target/surefire-reports/*.xml")
+      }
+
+    }

@@ -1,0 +1,2 @@
+docker container cp script.sh container_name:/tmp/script.sh
+docker logs -f container_name

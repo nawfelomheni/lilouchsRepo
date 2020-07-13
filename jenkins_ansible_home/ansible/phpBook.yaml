@@ -1,0 +1,9 @@
+--- 
+- 
+  hosts: web1
+  tasks: 
+    - 
+      name: "Tranfer template to web server"
+      copy: 
+        dest: /var/www/html/index.php
+        src: /var/jenkins_ansible_home/web/table.j2

@@ -1,0 +1,33 @@
+--- 
+- 
+  hosts: webservers
+  tasks: 
+    - 
+      file: 
+        path: /tmp/put.sh
+        state: touch
+      name: "create the sh file in remote"
+    - 
+      file: 
+        path: /tmp/people.txt
+        state: touch
+      name: "create the txt file in remote"
+    - 
+      copy: 
+        dest: /tmp/people.txt
+        force: true
+        mode: "700"
+        src: /var/jenkins_ansible_home/dbFiles/people.txt
+      name: "copy txt file to remote"
+    - 
+      copy: 
+        dest: /tmp/put.sh
+        force: true
+        mode: "700"
+        src: /var/jenkins_ansible_home/dbFiles/put.sh
+      name: "copy sh file to remote"
+    - 
+      name: "run the script on remote"
+      shell: /tmp/put.sh
+
+

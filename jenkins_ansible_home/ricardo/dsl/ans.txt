@@ -1,0 +1,20 @@
+job("ansible-dsl")
+{
+description ("this is the DSL version of the ansible-displayWebserver project")
+parameters
+  {
+    stringParam("MINAGE" , "20")
+    stringParam("MAXAGE" , "70") 
+    }
+steps
+  {
+    ansiblePlaybook("/var/jenkins_ansible_home/ansible/phpBook2.yaml")
+{
+    inventoryPath("/var/jenkins_ansible_home/hosts")
+    extraVars {
+                extraVar("MIN_AGE", '${MINAGE}', false)
+                extraVar("MAX_AGE", '${MAXAGE}', false)
+            }
+     }
+ } 
+}

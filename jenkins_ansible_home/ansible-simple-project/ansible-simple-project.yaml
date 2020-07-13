@@ -1,0 +1,20 @@
+--- 
+- 
+  hosts: web1
+  tasks: 
+    - 
+      file: 
+        path: /tmp/ansible-simple-project.sh
+        state: touch
+      name: "create the sh file in remote"
+    - 
+      template: 
+        dest: /tmp/ansible-simple-project.sh
+        force: true
+        mode: "700"
+        src: /var/jenkins_ansible_home/ansible-simple-project/ansible-simple-project.sh
+      name: "copy sh file to remote"
+    - 
+      name: "run the script on remote"
+      shell: /tmp/ansible-simple-project.sh
+

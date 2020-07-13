@@ -1,0 +1,4 @@
+- hosts: webservers
+  tasks: 
+    - debug:
+         msg: "{{ MSG }}      
