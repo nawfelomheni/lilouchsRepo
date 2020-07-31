@@ -1,15 +1,6 @@
 version: '3'
 services:
 
-  db_host:
-    container_name: db
-    image: mysql:5.7
-    environment:
-      - "MYSQL_ROOT_PASSWORD=1234"
-    volumes:
-      - $PWD/db_data:/var/lib/mysql
-    networks:
-      - net
   jenkins_ansible:
     container_name: jenkins-ansible
     image: jenkins-ansible-image
@@ -22,15 +13,6 @@ services:
     networks:
       - net
 
-  web:
-    container_name: web
-    image: ansible-web
-    build:
-      context: jenkins_ansible_home/web
-    ports:
-      - "80:80"
-    networks:
-      - net
   remote_host:
     container_name: remote-host
     image: remote-host-image
@@ -40,6 +22,5 @@ services:
       - $PWD/aws-s3.sh/command.sh:/tmp/command.sh
     networks:
       - net
-
 networks:
   net:
